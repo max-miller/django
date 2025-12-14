@@ -1,0 +1,23 @@
+{% extends 'books_layout.html' %}
+
+{% block body %}
+<h1 class="edition_number">Edition {{edition_n}}</h1>
+{% for book in edition_content %}
+
+    <h2 class="book_title">{{book.title}} </h2>
+    <h3 class="book_author">{{book.author}} </h3>
+    <div class="review_box">
+        <div class="book_container">
+            <img class="book_cover" src={{book.cover_img_link}}>
+        </div>
+
+        {% for paragraph in book.review %}
+            <p class="review_content">{{paragraph}}</p>
+        {% endfor %}
+    </div>
+
+    <div class="content_break" style="clear: both;"></div>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'books_layout.html' %}
+
+{% block body %}
+<div class="landing_text">Welcome to Ex Libris from Maxter and Commander, home of the best annual book subscription a
+   friendship or
+relationship with Max can get you. For brief blurbs about each of the books in a given edition of the book
+subscription, please visit the appropriate page:
+</div>
+{% for edition in editions %}
+    <ul><a href="{% url 'letter' edition.label %}"> Edition {{ edition.number }}</a></ul>
+{% endfor %}
+{% endblock %}

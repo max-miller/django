@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Libris</title>
+    <link href="{% static 'books_styles.css' %}" rel="stylesheet"/>
+</head>
+<body>
+  <nav>
+      <div class="banner">
+          <div class="dropdown">
+              <button class="dropdown_button">Annual Book Picks</button>
+              <div class="dropdown_content">
+                  {% for edition in editions %}
+                    <a href="{% url 'letter' edition.label %}"> Edition {{ edition.number }}</a>
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
+  </nav>
+  <div class="body">
+      <div class="content">
+          {%block body %}
+          {% endblock %}
+      </div>
+  </div>
+</body>
+</html>

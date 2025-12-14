@@ -1,0 +1,86 @@
+.dropdown_button {
+  background-color: lightgrey;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: GhostWhite;
+  border-radius: 5px
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown_content a:hover {background-color: lightslategrey;}
+
+.dropdown:hover .dropdown_content {display: block}
+
+.dropdown:hover .dropdown_button {background-color: lightslategrey;}
+
+
+
+.body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: AliceBlue;
+}
+
+body {background-color: black;}
+
+.edition_number {
+    font-size: 60px;
+    text-align: center;
+}
+
+.book_container{
+    float: left;
+    width: 35%;
+}
+.book_cover {
+    width: 95%;
+}
+
+.review_content {
+    font-size: 24px;
+}
+
+.book_title {
+    font-size: 40px;
+}
+.book_author {
+    font-size: 30px
+}
+
+.banner {
+    background-color: AliceBlue;
+    border-radius: 5px;
+}
+
+.content_break {
+    height: 10px;
+}
+
+.landing_text {
+    font-size: 30px
+}
