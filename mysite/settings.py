@@ -55,6 +55,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+CORS_ALLOWED_ORIGINS = ['https://server-production-8df97.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://server-production-8df97.up.railway.app']
 
 ROOT_URLCONF = 'mysite.urls'
 
