@@ -7,6 +7,6 @@ relationship with Max can get you. For brief blurbs about each of the books in a
 subscription, please visit the appropriate page:
 </div>
 {% for edition in editions %}
-    <ul><a href="{% url 'letter' edition.label %}"> Edition {{ edition.number }}</a></ul>
+    <ul class="edition_list"><a href="{% url 'letter' edition.label %}"> Edition {{ edition.number }}</a></ul>
 {% endfor %}
 {% endblock %}

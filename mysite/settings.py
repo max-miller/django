@@ -24,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rc^*w^w&6g9_(uvx#6s*bnt!w)l0rdi%!l7mv#y%uc&x%wo5pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
+#These are the database lines for production
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -92,7 +93,7 @@ DATABASES = {
         'PORT': os.environ["PGPORT"],
     }
 }
-
+##These are the database lines for working at home - run in command line with DATABASE_URL=...
 # import dj_database_url
 #
 # DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'),conn_max_age=600)}
